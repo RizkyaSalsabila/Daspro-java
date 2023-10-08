@@ -1,5 +1,3 @@
-package LatihanIndividu_24;
-
 import java.util.Scanner;
 public class GameFPS24 {
     public static void main (String[] args) {

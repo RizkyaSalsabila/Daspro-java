@@ -1,5 +1,3 @@
-package LatihanIndividu_24;
-
 import java.util.Scanner;
 public class PerkiraanCuaca24 {
     public static void main(String[] args) {
