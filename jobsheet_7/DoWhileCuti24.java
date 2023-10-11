@@ -29,11 +29,10 @@ public class DoWhileCuti24 {
                     System.out.println("Silahkan masukkan sisa jumlah hari Anda sesuai jatah cuti yang diberikan");
                     continue;
                 }
+            } else {
+                System.out.println("Oke, terima kasih");
+                break;
             }
         } while (jatahCuti > 0);
-
-
-
-
     }
 }
