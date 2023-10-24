@@ -15,10 +15,13 @@ public class ArrayNilai24 {
             nilaiAkhir[i] = sc.nextInt();
         }
 
-        //Perulangan FOR, jika kondisi nilai > 70 maka cetak lulus
+        //Perulangan FOR
         for (int i = 0; i < nilaiAkhir.length; i++) {
+            //Pemilihan if else untuk menentukan kelulusan
             if (nilaiAkhir[i] > 70) {
-                System.out.println("Mahasiswa ke - " + i + " lulus !");
+                System.out.println("Mahasiswa ke - " + i + " lulus!");
+            } else {
+                System.out.println("Mahasiswa ke - " + i + " tidak lulus!");
             }
         }
 
