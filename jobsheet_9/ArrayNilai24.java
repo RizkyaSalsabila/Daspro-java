@@ -15,9 +15,11 @@ public class ArrayNilai24 {
             nilaiAkhir[i] = sc.nextInt();
         }
 
-        //Perulangan FOR untuk menampilkan semua isi elemen array
-        for (int i = 0; i < 10; i++) {
-            System.out.println("Nilai akhir ke- " + i + " adalah " + nilaiAkhir[i]);
+        //Perulangan FOR, jika kondisi nilai > 70 maka cetak lulus
+        for (int i = 0; i < nilaiAkhir.length; i++) {
+            if (nilaiAkhir[i] > 70) {
+                System.out.println("Mahasiswa ke - " + i + " lulus !");
+            }
         }
 
     }
