@@ -4,11 +4,10 @@ public class ArrayBilangan24 {
         //Deklarasi dan inisialisasikan array bertipe int
         int[] bil = {5, 13, -7, 17};
 
-        //Cetak array
-        System.out.println(bil[0]);
-        System.out.println(bil[1]);
-        System.out.println(bil[2]);
-        System.out.println(bil[3]);
+        //Cetak array menggunakan FOR
+        for (int i = 0; i < 4; i++) {
+            System.out.println(bil[i]);
+        }
 
     }
 }
