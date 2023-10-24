@@ -1,14 +1,8 @@
 public class ArrayBilangan24 {
     public static void main(String[] args) {
         
-        //Deklarasikan array bertipe int
-        int[] bil = new int[4];
-
-        //Isi setiap elemen pada array
-        bil[0] = 5;
-        bil[1] = 13;
-        bil[2] = -7;
-        bil[3] = 17;
+        //Deklarasi dan inisialisasikan array bertipe int
+        int[] bil = {5, 13, -7, 17};
 
         //Cetak array
         System.out.println(bil[0]);
