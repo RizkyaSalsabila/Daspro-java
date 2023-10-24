@@ -10,7 +10,7 @@ public class ArrayNilai24 {
         int[] nilaiAkhir = new int[10];
 
         //Perulangan FOR untuk menerima input dan mengisi elemen array
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < nilaiAkhir.length; i++) {
             System.out.print("Masukkan nilai akhir ke- " + i + " : ");
             nilaiAkhir[i] = sc.nextInt();
         }
