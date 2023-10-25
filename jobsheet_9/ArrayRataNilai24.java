@@ -10,11 +10,20 @@ public class ArrayRataNilai24 {
         //Deklarasi variable total, rata2
         double total = 0;
         double rata2;
+        int jumLulus = 0;
 
         //Perulangan FOR untuk menerima input dan mengisi elemen array nilaiMhs
         for (int i = 0; i < nilaiMhs.length; i++) {
             System.out.print("Masukkan nilai mahasiswa ke- " + (i+1) + " : ");
             nilaiMhs[i] = sc.nextInt();
+        }
+        
+        //Perulangan FOR untuk menentukan jumlah mahasiswa yang lulus
+        for (int i = 0; i < nilaiMhs.length; i++) {
+            if (nilaiMhs[i] > 70) {
+                System.out.println("Mahasiswa ke - " + (i+1) + " lulus!");
+                jumLulus++;
+            }
         }
 
         //Perulangan FOR untuk menghitung total nilai keseluruhan dalam array nilaiMhs 
@@ -25,8 +34,10 @@ public class ArrayRataNilai24 {
         //Rumus rata2
         rata2 = total / nilaiMhs.length;
 
+        //Cetak total mahasiswa lulus
+        System.out.println("\nTotal jumlah mahasiswa yang lulus sebanyak " + jumLulus + " orang");
         //Cetak rata2
-        System.out.println("Rata - rata nilai = " + rata2);
+        System.out.println("Rata - rata nilai keseluruhan = " + rata2);       
 
     }
 }
