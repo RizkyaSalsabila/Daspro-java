@@ -6,7 +6,7 @@ public class BubbleSortExample24 {
 
         for (int i = 0; i < intData.length; i++) {
             for (int j = 1; j < intData.length - i; j++) {
-                if (intData[j-1] > intData[j]) {
+                if (intData[j-1] < intData[j]) {
                     temp = intData[j];
                     intData[j] = intData[j-1];
                     intData[j-1] = temp;
@@ -14,7 +14,7 @@ public class BubbleSortExample24 {
             }
         }
 
-        System.out.println("Hasil Pengurutan : ");
+        System.out.println("Hasil Pengurutan(secara descending) : ");
         for (int i = 0; i < intData.length; i++) {
             System.out.println(intData[i]);
         }
