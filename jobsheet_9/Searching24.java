@@ -32,8 +32,13 @@ public class Searching24 {
                 break;
             }
         }
-        //Cetak posisi key dalam array
-        System.out.println("Key ada di posisi indeks ke - " + hasil);
+
+        //Pengecekan kondisi menggunakan if else
+        if (arrayInt[hasil] == key) {                     //Cetak jika kondisi benar
+            System.out.println("Key ada di posisi indeks ke - " + hasil);   
+        } else {                                         //Cetak jika kondisi salah
+            System.out.println("Key tidak ditemukan");                   
+        }
 
         input24.close();
     }
