@@ -11,6 +11,7 @@ public class Bioskop24 {
         penonton[2][0] = "Eka";
         penonton[2][1] = "Farhan";
         penonton[3][0] = "Gisel";
+        penonton[3][1] = "Hana";
 
         //Cetak semua elemen
         System.out.printf("%s \t %s \n", penonton[0][0], penonton[0][1]);
