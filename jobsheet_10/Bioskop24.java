@@ -21,9 +21,9 @@ public class Bioskop24 {
 
         //Cetak panjang elemen array penonton
         System.out.println(penonton.length);
-        //Array loop for untuk menampilkan panjang setiap baris
-        for (int i = 0; i < penonton.length; i++) {
-            System.out.println("Panjang baris ke - " + (i+1) + " : " + penonton[i].length);
+        //Foreach loop untuk menampilkan panjang setiap baris
+        for (String[] barisPenonton : penonton) {
+            System.out.println("Panjang baris : " + barisPenonton.length);
         }
     }
 }
