@@ -26,11 +26,9 @@ public class Bioskop24 {
             System.out.println("Panjang baris : " + barisPenonton.length);
         }
 
-        //Cetak nama penonton pada baris 3
-        System.out.println("\nPenonton pada baris ke - 3 : ");
-        //Foreach loop untuk menampilkan nama penonton
-        for (String i : penonton[2]) {
-            System.out.println(i);
+        //Array loop for untuk menampilkan nama setiap baris
+        for (int i = 0; i < penonton.length; i++) {
+            System.out.println("Penonton pada baris ke - " + (i+1) + " : " + String.join(", ", penonton[i]));
         }
     }
 }
