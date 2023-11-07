@@ -64,8 +64,15 @@ public class BioskopWithScanner24 {
                     for (int i = 0; i < penonton.length; i++) {
                         System.out.print("Penonton pada baris ke - " + (i+1) + " : ");
                         for (int j = 0; j < penonton[i].length; j++) {
+                            //jika kursi kosong, isi ***
+                            if (penonton[i][j] == null) {
+                                System.out.print("[" + "***" + "]");
+                                continue;
+                                
+                            }
                             System.out.print("[" + penonton[i][j] + "] ");
                         }
+
                         System.out.println(); 
                     }
                     break;
