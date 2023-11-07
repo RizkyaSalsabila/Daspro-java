@@ -39,6 +39,12 @@ public class BioskopWithScanner24 {
                             System.out.println("Maaf untuk baris / kolom kursi tidak tersedia\n");
                             continue;
                         }
+
+                        //Warning kursi sudah terisi
+                        if (penonton[baris-1][kolom-1] != null) {
+                            System.out.println("Maaf kursi tersebut sudah terisi. Silahkan isi baris dan kolom kembali\n");
+                            continue;
+                        }
                          
                         System.out.println();
             
