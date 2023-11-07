@@ -33,6 +33,13 @@ public class BioskopWithScanner24 {
                         System.out.print("Masukkan kolom : ");
                         kolom = input24.nextInt();
                         input24.nextLine();
+
+                        //Kondisi untuk menghandle kursi
+                        if (baris > penonton.length || kolom > penonton.length) {
+                            System.out.println("Maaf untuk baris / kolom kursi tidak tersedia\n");
+                            continue;
+                        }
+                         
                         System.out.println();
             
                         penonton[baris-1][kolom-1] = nama;
