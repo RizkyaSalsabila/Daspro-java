@@ -7,30 +7,61 @@ public class BioskopWithScanner24 {
         Scanner input24 = new Scanner(System.in);
 
         //Buat variabel 
-        int baris, kolom;
+        int baris, kolom, menuInput;
         String nama, next;
 
         //Deklarasi dan instansiasi array 2 dimensi penonton
         String[][] penonton = new String[4][2];
 
         while (true) {
-            System.out.print("Masukkan nama : ");
-            nama = input24.nextLine();
-            System.out.print("Masukkan baris : ");
-            baris = input24.nextInt();
-            System.out.print("Masukkan kolom : ");
-            kolom = input24.nextInt();
+            System.out.println("\n1. Input Data Penonton");
+            System.out.println("2. Tampilkan daftar penonton");
+            System.out.println("3. Exit");
+            System.out.print("Pilih menu (1/2/3) : ");
+            menuInput = input24.nextInt();
             input24.nextLine();
 
-            penonton[baris-1][kolom-1] = nama;
+            System.out.println();
 
-            System.out.print("Input penonton lainnya? (y/n) : ");
-            next = input24.nextLine();
-
-            if (next.equalsIgnoreCase("n")) {   
-                break;
+            switch (menuInput) {
+                case 1:     //input nama penonton
+                    do {
+                        System.out.print("Masukkan nama : ");
+                        nama = input24.nextLine();
+                        System.out.print("Masukkan baris : ");
+                        baris = input24.nextInt();
+                        System.out.print("Masukkan kolom : ");
+                        kolom = input24.nextInt();
+                        input24.nextLine();
+                        System.out.println();
+            
+                        penonton[baris-1][kolom-1] = nama;
+            
+                        System.out.print("Input penonton lainnya? (y/n) : ");
+                        next = input24.nextLine();
+                        System.out.println();
+            
+                        if (next.equalsIgnoreCase("n")) {   
+                            break;
+                        }
+                    } while (true);
+                    break;
+                case 2:     //tampilkan nama
+                    System.out.println("Berikut adalah daftar nama penonton bioskop");
+                    for (int i = 0; i < penonton.length; i++) {
+                        System.out.print("Penonton pada baris ke - " + (i+1) + " : ");
+                        for (int j = 0; j < penonton[i].length; j++) {
+                            System.out.print("[" + penonton[i][j] + "] ");
+                        }
+                        System.out.println(); 
+                    }
+                    break;
+                case 3:     //exit
+                    return;
+                default:
+                System.out.println("Menu yang Anda masukkan salah. Silahkan coba lagi");
+                    break;
             }
         }
-        input24.close();
     }
 }
