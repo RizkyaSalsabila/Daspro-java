@@ -15,7 +15,15 @@ public class Quiz24 {
                 System.out.print("Tebak angka (1-10) : ");
                 int answer = input.nextInt();
                 input.nextLine();
-                success = (answer == number);
+        
+                if(answer == number) {
+                    success = true;
+                    System.out.println("Jawaban benar");
+                } else if(answer > number) {
+                    System.out.println("Input yang Anda masukkan lebih besar dari jawaban / number");
+                } else {
+                    System.out.println("Input yang Anda masukkan lebih kecil dari jawaban / number");
+                }
             } while(!success);
             System.out.print("Apakah Anda ingin mengulang permainan (Y/y)? ");
             menu = input.nextLine().charAt(0);
