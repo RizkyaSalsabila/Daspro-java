@@ -17,17 +17,23 @@ public class NestedLoop_2341720056 {
             System.out.println();
         } 
 
-        //Menampilkan menggunakan foreach
+        //Menampilkan dan menghitung rata2 menggunakan foreach
+        double rata2 = 0;
+        double jumlah = 0;
+
         int i = 0;
         for (Double[] outer : temps) {
             System.out.print("Kota ke - " + (i+1) + " : ");
             for (Double inner : outer) {
-                System.out.print(inner + ", ");
+                System.out.print(inner + "  ");
+                jumlah += inner;
+
             }
             System.out.println();
+            rata2 = jumlah / outer.length;
+            System.out.println("Rata - rata kota ke - " + (i+1) + " : " + rata2 + "\n");        //Print rata2
             i++;
         }
-
         input.close();
     }
 }
