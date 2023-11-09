@@ -7,6 +7,7 @@ public class NestedLoop_2341720056 {
         //Deklarasi dan instansiasi array temps
         Double[][] temps = new Double[5][7];
 
+        //Input menggunakan perulangan bersarang
         for (int i = 0; i < temps.length; i++) {
             System.out.println("Kota ke - " + i);
             for (int j = 0; j < temps[0].length; j++) {
@@ -14,6 +15,17 @@ public class NestedLoop_2341720056 {
                 temps[i][j] = input.nextDouble();
             }
             System.out.println();
+        } 
+
+        //Menampilkan menggunakan foreach
+        int i = 0;
+        for (Double[] outer : temps) {
+            System.out.print("Kota ke - " + (i+1) + " : ");
+            for (Double inner : outer) {
+                System.out.print(inner + ", ");
+            }
+            System.out.println();
+            i++;
         }
 
         input.close();
