@@ -1,9 +1,9 @@
 import java.util.Scanner;
 public class NilaiMhs24 {
     //Deklarasi dan instansiasi array 2 dimensi data
-    static int data[][] = new int[5][7];
+    static int data[][] = new int[2][3];
     //Deklarasi dan instansiasi array 1 dimensi nama
-    static String nama[] = new String[5];
+    static String nama[] = new String[2];
 
     //Fungsi inputDataMahasiswa
     static void inputDataMhs() {
@@ -68,10 +68,34 @@ public class NilaiMhs24 {
         System.out.println("Nilai tertinggi " + nilaiTinggi + " terletak pada minggu ke " + mingguKe);
     }
 
+    //Fungsi tampilNilaiMahasiswaTertinggi
+    static void tampilNilMhsTertinggi() {
+        //Judul
+        System.out.println("\n\nMahasiswa Nilai Tertinggi");
+        System.out.println("============================================================");
+
+        int nilaiTinggi = data[0][0];
+        int mingguKe = 1;
+        String mhs = nama[0];
+        
+        //Perulangan For Bersarang
+        for (int i = 0; i < data.length; i++) {
+            mhs = nama[i];
+            for (int j = 0; j < data[i].length; j++) {
+                if (data[i][j] > nilaiTinggi) {
+                    nilaiTinggi = data[i][j];
+                    mingguKe = j + 1;
+                }
+            }
+        }
+        System.out.println("Nilai tertingi " + nilaiTinggi + " pada minggu ke " + mingguKe + " dimiliki oleh " + mhs);
+    }
+
     //Fungsi method main
     public static void main(String[] args) {
         inputDataMhs();     //Panggil fungsi inputDataMhs()
         tampilDataMhs();    //Panggil fungsi tampilDataMhs()
-        cariNilTertinggi(); //Panggil fungsi cariNilTertinggi
+        cariNilTertinggi(); //Panggil fungsi cariNilTertinggi()
+        tampilNilMhsTertinggi();    //Panggil fungsi tampilNilMhsTertinggi()
     }
 }
