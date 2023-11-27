@@ -28,8 +28,27 @@ public class NilaiMhs24 {
         }
     }
 
+    //Fungsi tampilDataMahasiswa
+    static void tampilDataMhs() {
+        //Judul
+        System.out.println("\n\nTampil Data");
+        System.out.println("============================================================\n");
+        
+        //Perulangan for bersarang untuk menampilkan nama dan nilai mahasiswa
+        //For tampil nama
+        for (int i = 0; i < data.length; i++) {
+            System.out.print(nama[i] + "\t:\t");
+            //For tampil nilai setiap mahasiswa
+            for (int j = 0; j < data[i].length; j++) {
+                System.out.print(data[i][j] + "\t");
+            }
+            System.out.println();
+        }
+    }
+
     //Fungsi method main
     public static void main(String[] args) {
         inputDataMhs();     //Panggil fungsi inputDataMhs()
+        tampilDataMhs();    //Panggil fungsi tampilDataMhs()
     }
 }
