@@ -32,7 +32,7 @@ public class NilaiMhs24 {
     static void tampilDataMhs() {
         //Judul
         System.out.println("\n\nTampil Data");
-        System.out.println("============================================================\n");
+        System.out.println("============================================================");
         
         //Perulangan for bersarang untuk menampilkan nama dan nilai mahasiswa
         //For tampil nama
@@ -46,9 +46,32 @@ public class NilaiMhs24 {
         }
     }
 
+    //Fungsi cariNilaiTertinggi
+    static void cariNilTertinggi() {
+        //Judul
+        System.out.println("\n\nCari Nilai Tertinggi");
+        System.out.println("============================================================");
+
+        //Deklarasikan variabel
+        int nilaiTinggi = data[0][0];
+        int mingguKe = 1;
+
+        //Perulangan For Bersarang
+        for (int i = 0; i < data.length; i++) {
+            for (int j = 0; j < data[i].length; j++) {
+                if (data[i][j] > nilaiTinggi) {
+                    nilaiTinggi = data[i][j];
+                    mingguKe = j + 1;
+                }
+            }
+        }
+        System.out.println("Nilai tertinggi " + nilaiTinggi + " terletak pada minggu ke " + mingguKe);
+    }
+
     //Fungsi method main
     public static void main(String[] args) {
         inputDataMhs();     //Panggil fungsi inputDataMhs()
         tampilDataMhs();    //Panggil fungsi tampilDataMhs()
+        cariNilTertinggi(); //Panggil fungsi cariNilTertinggi
     }
 }
