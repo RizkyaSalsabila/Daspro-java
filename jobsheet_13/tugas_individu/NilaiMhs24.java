@@ -1,14 +1,16 @@
 import java.util.Scanner;
 public class NilaiMhs24 {
+    static int jumMhs, jumTugas;
     //Deklarasi dan instansiasi array 2 dimensi data
-    static int data[][] = new int[5][7];
+    static int data[][] = new int[jumMhs][jumTugas];
     //Deklarasi dan instansiasi array 1 dimensi nama
-    static String nama[] = new String[5];
+    static String nama[] = new String[jumMhs];
+    //Deklarasi Scanner
+    static Scanner input = new Scanner(System.in);
+    
 
     //Fungsi inputDataMahasiswa
     static void inputDataMhs() {
-        //Deklarasi Scanner
-        Scanner input = new Scanner(System.in);
         //Judul
         System.out.println("\nInput Data");
         System.out.println("============================================================");
@@ -93,6 +95,14 @@ public class NilaiMhs24 {
 
     //Fungsi method main
     public static void main(String[] args) {
+        //input jumlah mahasiswa
+        System.out.print("Masukkan jumlah mahasiswa : ");
+        jumMhs = input.nextInt();
+        //input jumlah tugas / minggu
+        System.out.print("Masukkan jumlah tugas : ");
+        jumTugas = input.nextInt();
+        input.nextLine();
+
         inputDataMhs();     //Panggil fungsi inputDataMhs()
         tampilDataMhs();    //Panggil fungsi tampilDataMhs()
         cariNilTertinggi(); //Panggil fungsi cariNilTertinggi()
