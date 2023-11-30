@@ -6,6 +6,10 @@ public class Percobaan2_24 {
         if (y == 0) {
             return (1);
           } else {
+            System.out.print(x + " x ");
+            if (y == 1) {
+                System.out.print("1 = ");
+            }
             return (x * hitungPangkat(x, y - 1));
         }
     }
@@ -26,7 +30,7 @@ public class Percobaan2_24 {
 
         //Cetak hasil
         System.out.println(hitungPangkat(bilangan, pangkat));
-        
+
         sc.close();
     }
 }
