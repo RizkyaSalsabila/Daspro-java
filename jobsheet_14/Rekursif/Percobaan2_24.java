@@ -1,10 +1,11 @@
 import java.util.Scanner;
 public class Percobaan2_24 {
+
     //Buat fungsi hitungPangkat()
     static int hitungPangkat(int x, int y) {
         if (y == 0) {
             return (1);
-        } else {
+          } else {
             return (x * hitungPangkat(x, y - 1));
         }
     }
@@ -25,5 +26,7 @@ public class Percobaan2_24 {
 
         //Cetak hasil
         System.out.println(hitungPangkat(bilangan, pangkat));
+        
+        sc.close();
     }
 }
